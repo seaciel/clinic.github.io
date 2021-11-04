@@ -1,0 +1,62 @@
+<html>  
+<head> Javascript Events </head>  
+<style type = "text/css">  
+    #bg{  
+    width: 200px;  
+    height: 200px;  
+    border: 4px solid blue;  
+    }  
+    </style>  
+
+<body>  
+<p></p>
+<form>  
+<input type="button" onclick="alert('Good Morning')" value="Click to Greet"/>  
+<input type="button" onclick="clickevent()" value="Click Surprise"/>
+</form>  
+
+<p>Click the button to display the date.</p>
+
+<button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+
+<p id="demo"></p>
+
+<button onclick="displayDate()">The time is?</button>
+
+<h2> Enter something here</h2>  
+
+<input type="text" id="input1" onfocus="focusevent()"/>  
+
+
+<h2> This is an example of window.onload() </h2>  
+<div id = "bg">Hello there</div>  
+
+<script language="Javascript" type="text/Javascript">  
+    <!--  
+    function clickevent()  
+    {  
+        alert("Bulaga!");  
+    }  
+    //-->  
+
+    function displayDate() {
+      document.getElementById("demo").innerHTML = Date();  
+     }
+
+
+      
+    function focusevent()  
+    {  
+        document.getElementById("input1").style.background=" aqua";  
+    }  
+
+    // example onload stylesheet
+    window.onload = function(){  
+        document.getElementById("bg").style.backgroundColor = "red";  
+        document.getElementById("bg").style.width = "300px";  
+        document.getElementById("bg").style.height = "300px";  
+     }  
+</script>  
+
+</body>  
+</html> 

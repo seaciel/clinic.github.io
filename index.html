@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+
+function validateform2(){  
+var name=document.myform2.name.value;  
+var password=document.myform2.password.value;  
+  
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}else if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+}else { alert("You are now logged in " +name);}  
+  window.location.href="events.html";
+
+}  
+</script>
+</head>
+<body>
+
+<h2>JavaScript Validation</h2>
+
+<form name="myform2"   method="get"  action="events.html">  
+    Name: <input type="text" name="name"><br/>  
+    Password: <input type="password" name="password"><br/>  
+    <input type="submit" name="submit" value="register"  ">  
+    </form>  
+</body>
+</html>
